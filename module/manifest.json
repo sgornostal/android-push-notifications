@@ -1,0 +1,7 @@
+{
+    "description": "My module template", 
+    "min_platform_version": "v2.2.5", 
+    "namespace": "android_push", 
+    "platform_version": "v2.2.5", 
+    "version": "0.1"
+}

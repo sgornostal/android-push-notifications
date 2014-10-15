@@ -1,0 +1,14 @@
+*.project
+*.iml
+.classpath
+.settings/
+.*.apk
+*.ap_
+*.dex
+*.class
+out/
+.idea/
+ForgeInspector/
+.lib/
+.trigger/
+an-inspector.*/

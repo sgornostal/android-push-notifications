@@ -1,0 +1,82 @@
+[
+  {
+    "do": {
+      "android_add_permission": {
+        "permission": "android.permission.INTERNET"
+      }
+    }
+  },
+  {
+    "do": {
+      "android_add_permission": {
+        "permission": "android.permission.GET_ACCOUNTS"
+      }
+    }
+  },
+  {
+    "do": {
+      "android_add_permission": {
+        "permission": "android.permission.WAKE_LOCK"
+      }
+    }
+  },
+  {
+    "do": {
+      "android_add_permission": {
+        "permission": "com.google.android.c2dm.permission.RECEIVE"
+      }
+    }
+  },
+  {
+    "do": {
+      "android_add_permission": {
+        "permission": "io.trigger.forge.android.inspector.permission.C2D_MESSAGE"
+      }
+    }
+  },
+  {
+    "do": {
+      "android_add_to_application_manifest": {
+        "element": {
+          "tag": "receiver",
+          "attributes": {
+            "android:name": "io.trigger.forge.android.modules.android_push.GoogleCloudMessagingBroadcastReceiver",
+            "android:permission": "com.google.android.c2dm.permission.SEND"
+          },
+          "children": [
+            {
+              "tag": "intent-filter",
+              "children": [
+                {
+                  "tag": "action",
+                  "attributes": {
+                    "android:name": "com.google.android.c2dm.intent.RECEIVE"
+                  }
+                },
+                {
+                  "tag": "category",
+                  "attributes": {
+                    "android:name": "io.trigger.forge.android.modules.android_push"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "do": {
+      "android_add_to_application_manifest": {
+        "element": {
+          "tag": "service",
+          "attributes": {
+            "android:name": "io.trigger.forge.android.modules.android_push.GoogleCloudMessagingIntentService",
+            "android:label": "GCM Push Notification Service"
+          }
+        }
+      }
+    }
+  }
+]
