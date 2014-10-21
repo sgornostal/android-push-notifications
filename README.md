@@ -47,13 +47,13 @@ Write your client app. This is the GCM-enabled Android application that runs on 
 #### Register with GCM
 This method register your application in Google Cloud Messaging. Success object contains unique `deviceToken`. Token used in your server to push notifications for this spectific device.
 ```js
-forge.internal.call('android_push.registerWithAPNS', {"gcm_id":"Your GCM sender ID"}, success, error);
+forge.internal.call('android_push.registerWithGCM', {"gcm_id":"Your GCM sender ID"}, success, error);
 ```
 
 #### Check GCM registration status
 This can be used to check whether or a device has been previously registered with GCM.
 ```js
-forge.internal.call('android_push.checkIfRegisteredWithAPNS', success, error);
+forge.internal.call('android_push.checkIfRegisteredWithGCM', success, error);
 ```
 
 ## Listeners
